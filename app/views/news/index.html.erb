@@ -1,0 +1,17 @@
+<h1><%= params[:header] %></h1>
+<h4 class="center">Powered by <a href="http://www.usatoday.com">USAToday</a></h4>
+
+<div class="row">
+	<ul class="span8" type="none">
+	<% @storys.each do |story| %>
+		<li>
+			<h5><%= link_to "#{story[:title]}", "#{story[:link]}"%></h5>
+			<p><%= "#{story[:description]}" %></p>
+			<h6><%= "Date: #{story[:date]}" %></h6>
+			<br>
+		</li>
+	<% end %>
+	</ul>
+</div>
+
+
